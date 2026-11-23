@@ -1,0 +1,49 @@
+# Env / secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Logs / temp（作業用ログは Git に含めない）
+*.log
+.agent/logs/
+/logs/
+/tmp/
+/temp/
+# ローカルの生成サイト・実動作検証（公開テンプレートには含めない）
+/.tmp/
+
+# Python（scripts/ の検証スクリプトを import したときに出る生成物）
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Agent personal overrides (official .claude/ equivalent)
+.agent/settings.local.json
+.claude/settings.local.json
+
+# Agent auto memory (if not committed)
+.agent/agent-memory/
+.claude/projects/
+
+# Bun / setup
+node_modules/
+.bun/
+.setup-backup/
+.setup-pkg-*.tmp
+
+# Generated language runtimes and build outputs
+.venv/
+target/
+.next/
+.turbo/
